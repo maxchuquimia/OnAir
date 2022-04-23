@@ -1259,6 +1259,8 @@ bail:
 //build and display notification
 -(void)showNotification:(Event*)event
 {
+
+    return;
     //notification content
     UNMutableNotificationContent* content = nil;
 

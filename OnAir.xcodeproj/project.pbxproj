@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		514ECF4E2813D76C00AAF444 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 514ECF4D2813D76C00AAF444 /* FirebaseDatabase */; };
-		514ECF502813D76C00AAF444 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 514ECF4F2813D76C00AAF444 /* FirebaseFirestore */; };
-		514ECF522813D83100AAF444 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 514ECF512813D83100AAF444 /* GoogleService-Info.plist */; };
+		514ECF5528141DFA00AAF444 /* MultiPeer in Frameworks */ = {isa = PBXBuildFile; productRef = 514ECF5428141DFA00AAF444 /* MultiPeer */; };
+		519A11A6281E7EE600E9A344 /* NearPeer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519A11A5281E7EE600E9A344 /* NearPeer.swift */; };
+		519A11A8281E7F5C00E9A344 /* NearPeerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519A11A7281E7F5C00E9A344 /* NearPeerDelegate.swift */; };
+		519A11AA281E822400E9A344 /* ServiceAdvertiserHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519A11A9281E822400E9A344 /* ServiceAdvertiserHandler.swift */; };
+		519A11AC281E827400E9A344 /* ServiceBrowserHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519A11AB281E827400E9A344 /* ServiceBrowserHandler.swift */; };
+		519A11AE281E82F900E9A344 /* SessionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519A11AD281E82F900E9A344 /* SessionHandler.swift */; };
+		519A11B0281E854300E9A344 /* NearPeerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519A11AF281E854300E9A344 /* NearPeerConstants.swift */; };
+		519A11B2281E89D500E9A344 /* NearPeerID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519A11B1281E89D500E9A344 /* NearPeerID.swift */; };
 		51AC20D32813B7FB0004B644 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AC20D22813B7FB0004B644 /* AppDelegate.swift */; };
 		51AC20D52813B7FB0004B644 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AC20D42813B7FB0004B644 /* MainViewController.swift */; };
 		51AC20D72813B7FC0004B644 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51AC20D62813B7FC0004B644 /* Assets.xcassets */; };
@@ -25,6 +30,10 @@
 		51AC21102813C4C70004B644 /* Client.m in Sources */ = {isa = PBXBuildFile; fileRef = 51AC210E2813C4C70004B644 /* Client.m */; };
 		51AC21142813C51C0004B644 /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 51AC21132813C51C0004B644 /* Utilities.m */; };
 		51AC21172813CE0B0004B644 /* Net.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AC21162813CE0B0004B644 /* Net.swift */; };
+		51B45E6F2816277A006491B8 /* DNDDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B45E6E2816277A006491B8 /* DNDDetector.swift */; };
+		51B45E7128162790006491B8 /* Detector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B45E7028162790006491B8 /* Detector.swift */; };
+		51B45E7328162F59006491B8 /* Packet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B45E7228162F59006491B8 /* Packet.swift */; };
+		51B45E752816321E006491B8 /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B45E742816321E006491B8 /* RequestType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +54,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		514ECF512813D83100AAF444 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		519A11A5281E7EE600E9A344 /* NearPeer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearPeer.swift; sourceTree = "<group>"; };
+		519A11A7281E7F5C00E9A344 /* NearPeerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearPeerDelegate.swift; sourceTree = "<group>"; };
+		519A11A9281E822400E9A344 /* ServiceAdvertiserHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAdvertiserHandler.swift; sourceTree = "<group>"; };
+		519A11AB281E827400E9A344 /* ServiceBrowserHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceBrowserHandler.swift; sourceTree = "<group>"; };
+		519A11AD281E82F900E9A344 /* SessionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionHandler.swift; sourceTree = "<group>"; };
+		519A11AF281E854300E9A344 /* NearPeerConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearPeerConstants.swift; sourceTree = "<group>"; };
+		519A11B1281E89D500E9A344 /* NearPeerID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearPeerID.swift; sourceTree = "<group>"; };
 		51AC20CF2813B7FB0004B644 /* OnAir.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnAir.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51AC20D22813B7FB0004B644 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51AC20D42813B7FB0004B644 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +87,10 @@
 		51AC21122813C51C0004B644 /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
 		51AC21132813C51C0004B644 /* Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
 		51AC21162813CE0B0004B644 /* Net.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Net.swift; sourceTree = "<group>"; };
+		51B45E6E2816277A006491B8 /* DNDDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNDDetector.swift; sourceTree = "<group>"; };
+		51B45E7028162790006491B8 /* Detector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detector.swift; sourceTree = "<group>"; };
+		51B45E7228162F59006491B8 /* Packet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Packet.swift; sourceTree = "<group>"; };
+		51B45E742816321E006491B8 /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
 		754E59A02813D45800D8060C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,8 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				514ECF4E2813D76C00AAF444 /* FirebaseDatabase in Frameworks */,
-				514ECF502813D76C00AAF444 /* FirebaseFirestore in Frameworks */,
+				514ECF5528141DFA00AAF444 /* MultiPeer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +120,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		519A11A4281E7EDB00E9A344 /* NearPeer */ = {
+			isa = PBXGroup;
+			children = (
+				519A11A5281E7EE600E9A344 /* NearPeer.swift */,
+				519A11B1281E89D500E9A344 /* NearPeerID.swift */,
+				519A11AF281E854300E9A344 /* NearPeerConstants.swift */,
+				519A11A7281E7F5C00E9A344 /* NearPeerDelegate.swift */,
+				519A11A9281E822400E9A344 /* ServiceAdvertiserHandler.swift */,
+				519A11AB281E827400E9A344 /* ServiceBrowserHandler.swift */,
+				519A11AD281E82F900E9A344 /* SessionHandler.swift */,
+			);
+			path = NearPeer;
+			sourceTree = "<group>";
+		};
 		51AC20C62813B7FB0004B644 = {
 			isa = PBXGroup;
 			children = (
@@ -126,7 +158,6 @@
 			isa = PBXGroup;
 			children = (
 				754E59A02813D45800D8060C /* Info.plist */,
-				514ECF512813D83100AAF444 /* GoogleService-Info.plist */,
 				51AC20D22813B7FB0004B644 /* AppDelegate.swift */,
 				51AC21022813B8AB0004B644 /* Infra */,
 				51AC20FD2813B8640004B644 /* Scenes */,
@@ -166,6 +197,7 @@
 		51AC21022813B8AB0004B644 /* Infra */ = {
 			isa = PBXGroup;
 			children = (
+				51B45E6B28162584006491B8 /* Script */,
 				51AC21152813CE000004B644 /* Net */,
 				51AC21032813B8B10004B644 /* Detectors */,
 			);
@@ -175,7 +207,9 @@
 		51AC21032813B8B10004B644 /* Detectors */ = {
 			isa = PBXGroup;
 			children = (
+				51B45E7028162790006491B8 /* Detector.swift */,
 				51AC21002813B8A70004B644 /* MicDetector.swift */,
+				51B45E6E2816277A006491B8 /* DNDDetector.swift */,
 				51AC21052813C3E50004B644 /* AVMonitor.m */,
 				51AC21072813C4000004B644 /* AVMonitor.h */,
 				51AC210A2813C4AD0004B644 /* Event.h */,
@@ -196,8 +230,18 @@
 			isa = PBXGroup;
 			children = (
 				51AC21162813CE0B0004B644 /* Net.swift */,
+				51B45E742816321E006491B8 /* RequestType.swift */,
+				51B45E7228162F59006491B8 /* Packet.swift */,
+				519A11A4281E7EDB00E9A344 /* NearPeer */,
 			);
 			path = Net;
+			sourceTree = "<group>";
+		};
+		51B45E6B28162584006491B8 /* Script */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Script;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,8 +261,7 @@
 			);
 			name = OnAir;
 			packageProductDependencies = (
-				514ECF4D2813D76C00AAF444 /* FirebaseDatabase */,
-				514ECF4F2813D76C00AAF444 /* FirebaseFirestore */,
+				514ECF5428141DFA00AAF444 /* MultiPeer */,
 			);
 			productName = OnAir;
 			productReference = 51AC20CF2813B7FB0004B644 /* OnAir.app */;
@@ -294,7 +337,7 @@
 			);
 			mainGroup = 51AC20C62813B7FB0004B644;
 			packageReferences = (
-				514ECF4C2813D76C00AAF444 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				514ECF5328141DFA00AAF444 /* XCRemoteSwiftPackageReference "MultiPeer" */,
 			);
 			productRefGroup = 51AC20D02813B7FB0004B644 /* Products */;
 			projectDirPath = "";
@@ -314,7 +357,6 @@
 			files = (
 				51AC20D72813B7FC0004B644 /* Assets.xcassets in Resources */,
 				51AC20DA2813B7FC0004B644 /* Main.storyboard in Resources */,
-				514ECF522813D83100AAF444 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,16 +381,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51B45E6F2816277A006491B8 /* DNDDetector.swift in Sources */,
 				51AC210D2813C4AD0004B644 /* LogMonitor.m in Sources */,
+				519A11AE281E82F900E9A344 /* SessionHandler.swift in Sources */,
 				51AC21172813CE0B0004B644 /* Net.swift in Sources */,
 				51AC210C2813C4AD0004B644 /* Event.m in Sources */,
 				51AC21102813C4C70004B644 /* Client.m in Sources */,
 				51AC21142813C51C0004B644 /* Utilities.m in Sources */,
 				51AC20D52813B7FB0004B644 /* MainViewController.swift in Sources */,
 				51AC20D32813B7FB0004B644 /* AppDelegate.swift in Sources */,
+				519A11B0281E854300E9A344 /* NearPeerConstants.swift in Sources */,
+				519A11A6281E7EE600E9A344 /* NearPeer.swift in Sources */,
+				519A11AA281E822400E9A344 /* ServiceAdvertiserHandler.swift in Sources */,
+				51B45E7128162790006491B8 /* Detector.swift in Sources */,
+				519A11AC281E827400E9A344 /* ServiceBrowserHandler.swift in Sources */,
+				51B45E752816321E006491B8 /* RequestType.swift in Sources */,
 				51AC21062813C3E50004B644 /* AVMonitor.m in Sources */,
 				51AC20FF2813B8970004B644 /* MainViewModel.swift in Sources */,
 				51AC21012813B8A70004B644 /* MicDetector.swift in Sources */,
+				519A11B2281E89D500E9A344 /* NearPeerID.swift in Sources */,
+				519A11A8281E7F5C00E9A344 /* NearPeerDelegate.swift in Sources */,
+				51B45E7328162F59006491B8 /* Packet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,7 +500,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -502,7 +555,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -520,7 +573,7 @@
 				CODE_SIGN_ENTITLEMENTS = OnAir/OnAir.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -532,6 +585,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.chuquimianproductions.OnAir;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -551,7 +605,7 @@
 				CODE_SIGN_ENTITLEMENTS = OnAir/OnAir.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -563,6 +617,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.chuquimianproductions.OnAir;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -686,26 +741,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		514ECF4C2813D76C00AAF444 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		514ECF5328141DFA00AAF444 /* XCRemoteSwiftPackageReference "MultiPeer" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			repositoryURL = "https://github.com/dingwilson/MultiPeer.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 8.0.0;
+				minimumVersion = 0.2.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		514ECF4D2813D76C00AAF444 /* FirebaseDatabase */ = {
+		514ECF5428141DFA00AAF444 /* MultiPeer */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 514ECF4C2813D76C00AAF444 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseDatabase;
-		};
-		514ECF4F2813D76C00AAF444 /* FirebaseFirestore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 514ECF4C2813D76C00AAF444 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestore;
+			package = 514ECF5328141DFA00AAF444 /* XCRemoteSwiftPackageReference "MultiPeer" */;
+			productName = MultiPeer;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

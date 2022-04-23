@@ -6,78 +6,44 @@
 //
 
 import Foundation
-//import Network
-import Firebase
+import MultiPeer
 
 final class Net: NSObject {
 
     static let shared = Net()
 
-//    let service: NetService
-//    let browser: NetServiceBrowser
-    let db = Database.database().reference(withPath: "on_air")
+    let keepAliveInterval: TimeInterval = 120.0
+    var keepAlive: Timer?
 
-    var isSomeoneOnAir: (Bool) -> Void = { _ in }
+    var didReceivePacket: (Packet) -> Void = { _ in }
+    var connectedDevicesChanged: ([String]) -> Void = { _ in }
 
-    var userId: String = {
-        if UserDefaults.standard.string(forKey: "oaid") == nil {
-            UserDefaults.standard.set(UUID().uuidString, forKey: "oaid")
-        }
-        return UserDefaults.standard.string(forKey: "oaid")!
-    }()
-
-
-    override init() {
-
-//        service = NetService(domain: "local.", type: "_ona._tcp.", name: "onair")
-//        browser = NetServiceBrowser()
-        super.init()
-//        service.delegate = self
-//        service.publish()
-//
-//        browser.searchForServices(ofType: "_ona._tcp.", inDomain: "local.")
-
-        db.observe(.value) { [unowned self] snapshot in
-            var value = snapshot.value as! [String: String]
-            print(value)
-            value[userId] = "not"
-            self.isSomeoneOnAir(value.values.contains("quiet_please"))
-        }
+    func begin(with userId: String) {
+        MultiPeer.instance.initialize(serviceType: "onairapp", deviceName: userId)
+        MultiPeer.instance.autoConnect()
+        MultiPeer.instance.delegate = self
     }
 
-    func set(isOnAir: Bool) {
-        db.child("\(userId)").setValue(isOnAir ? "quiet_please" : "not")
+    func broadcast(packet: Packet) {
+        keepAlive?.invalidate()
+        MultiPeer.instance.send(data: packet.stringValue.data(using: .utf8)!, type: RequestType.packetV1.rawValue)
+        keepAlive = Timer.scheduledTimer(withTimeInterval: keepAliveInterval, repeats: false, block: { [weak self] _ in
+            self?.broadcast(packet: packet)
+        })
     }
 
 }
 
-//extension Net: NetServiceDelegate {
-//
-//    func netServiceWillPublish(_ sender: NetService) {
-//        print(#function)
-//    }
-//
-//
-//    func netServiceDidPublish(_ sender: NetService) {
-//        print(#function)
-//    }
-//
-//
-//    func netService(_ sender: NetService, didNotPublish errorDict: [String : NSNumber]) {
-//        print(#function, errorDict)
-//    }
-//
-//}
-//
-//
-//extension Net: NetServiceBrowserDelegate {
-//
-//    func netServiceBrowser(_ browser: NetServiceBrowser, didFind service: NetService, moreComing: Bool) {
-//        print("Found Service", service, moreComing)
-//    }
-//
-//    func netServiceBrowser(_ browser: NetServiceBrowser, didNotSearch errorDict: [String : NSNumber]) {
-//        print(#function, errorDict)
-//    }
-//
-//}
+extension Net: MultiPeerDelegate {
+
+    func multiPeer(connectedDevicesChanged devices: [String]) {
+        connectedDevicesChanged(devices)
+    }
+
+    func multiPeer(didReceiveData data: Data, ofType type: UInt32, from peerID: MCPeerID) {
+        guard type == RequestType.packetV1.rawValue else { return }
+        guard let packet = Packet(string: String(data: data, encoding: .utf8) ?? "") else { return }
+        didReceivePacket(packet)
+    }
+
+}
