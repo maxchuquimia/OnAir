@@ -7,12 +7,15 @@
 
 import Cocoa
 
-class ViewController: NSViewController {
+class MainViewController: NSViewController {
+
+//    let test = MicDetector()
+//    let net = Net()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+//        test.test()
+//        print(net)
     }
 
     override var representedObject: Any? {

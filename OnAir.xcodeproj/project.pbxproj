@@ -7,13 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		514ECF4E2813D76C00AAF444 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 514ECF4D2813D76C00AAF444 /* FirebaseDatabase */; };
+		514ECF502813D76C00AAF444 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 514ECF4F2813D76C00AAF444 /* FirebaseFirestore */; };
+		514ECF522813D83100AAF444 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 514ECF512813D83100AAF444 /* GoogleService-Info.plist */; };
 		51AC20D32813B7FB0004B644 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AC20D22813B7FB0004B644 /* AppDelegate.swift */; };
-		51AC20D52813B7FB0004B644 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AC20D42813B7FB0004B644 /* ViewController.swift */; };
+		51AC20D52813B7FB0004B644 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AC20D42813B7FB0004B644 /* MainViewController.swift */; };
 		51AC20D72813B7FC0004B644 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51AC20D62813B7FC0004B644 /* Assets.xcassets */; };
 		51AC20DA2813B7FC0004B644 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51AC20D82813B7FC0004B644 /* Main.storyboard */; };
 		51AC20E52813B7FC0004B644 /* OnAirTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AC20E42813B7FC0004B644 /* OnAirTests.swift */; };
 		51AC20EF2813B7FC0004B644 /* OnAirUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AC20EE2813B7FC0004B644 /* OnAirUITests.swift */; };
 		51AC20F12813B7FC0004B644 /* OnAirUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AC20F02813B7FC0004B644 /* OnAirUITestsLaunchTests.swift */; };
+		51AC20FF2813B8970004B644 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AC20FE2813B8970004B644 /* MainViewModel.swift */; };
+		51AC21012813B8A70004B644 /* MicDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AC21002813B8A70004B644 /* MicDetector.swift */; };
+		51AC21062813C3E50004B644 /* AVMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 51AC21052813C3E50004B644 /* AVMonitor.m */; };
+		51AC210C2813C4AD0004B644 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 51AC21092813C4AD0004B644 /* Event.m */; };
+		51AC210D2813C4AD0004B644 /* LogMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 51AC210B2813C4AD0004B644 /* LogMonitor.m */; };
+		51AC21102813C4C70004B644 /* Client.m in Sources */ = {isa = PBXBuildFile; fileRef = 51AC210E2813C4C70004B644 /* Client.m */; };
+		51AC21142813C51C0004B644 /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 51AC21132813C51C0004B644 /* Utilities.m */; };
+		51AC21172813CE0B0004B644 /* Net.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AC21162813CE0B0004B644 /* Net.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +45,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		514ECF512813D83100AAF444 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		51AC20CF2813B7FB0004B644 /* OnAir.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnAir.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51AC20D22813B7FB0004B644 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		51AC20D42813B7FB0004B644 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		51AC20D42813B7FB0004B644 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		51AC20D62813B7FC0004B644 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		51AC20D92813B7FC0004B644 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		51AC20DB2813B7FC0004B644 /* OnAir.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OnAir.entitlements; sourceTree = "<group>"; };
@@ -45,6 +57,22 @@
 		51AC20EA2813B7FC0004B644 /* OnAirUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnAirUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		51AC20EE2813B7FC0004B644 /* OnAirUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnAirUITests.swift; sourceTree = "<group>"; };
 		51AC20F02813B7FC0004B644 /* OnAirUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnAirUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		51AC20FE2813B8970004B644 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		51AC21002813B8A70004B644 /* MicDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicDetector.swift; sourceTree = "<group>"; };
+		51AC21042813C3E50004B644 /* OnAir-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OnAir-Bridging-Header.h"; sourceTree = "<group>"; };
+		51AC21052813C3E50004B644 /* AVMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVMonitor.m; sourceTree = "<group>"; };
+		51AC21072813C4000004B644 /* AVMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVMonitor.h; sourceTree = "<group>"; };
+		51AC21082813C4AD0004B644 /* LogMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogMonitor.h; sourceTree = "<group>"; };
+		51AC21092813C4AD0004B644 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		51AC210A2813C4AD0004B644 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		51AC210B2813C4AD0004B644 /* LogMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogMonitor.m; sourceTree = "<group>"; };
+		51AC210E2813C4C70004B644 /* Client.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Client.m; sourceTree = "<group>"; };
+		51AC210F2813C4C70004B644 /* Client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Client.h; sourceTree = "<group>"; };
+		51AC21112813C51C0004B644 /* Consts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Consts.h; sourceTree = "<group>"; };
+		51AC21122813C51C0004B644 /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
+		51AC21132813C51C0004B644 /* Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
+		51AC21162813CE0B0004B644 /* Net.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Net.swift; sourceTree = "<group>"; };
+		754E59A02813D45800D8060C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +80,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				514ECF4E2813D76C00AAF444 /* FirebaseDatabase in Frameworks */,
+				514ECF502813D76C00AAF444 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,8 +125,11 @@
 		51AC20D12813B7FB0004B644 /* OnAir */ = {
 			isa = PBXGroup;
 			children = (
+				754E59A02813D45800D8060C /* Info.plist */,
+				514ECF512813D83100AAF444 /* GoogleService-Info.plist */,
 				51AC20D22813B7FB0004B644 /* AppDelegate.swift */,
-				51AC20D42813B7FB0004B644 /* ViewController.swift */,
+				51AC21022813B8AB0004B644 /* Infra */,
+				51AC20FD2813B8640004B644 /* Scenes */,
 				51AC20D62813B7FC0004B644 /* Assets.xcassets */,
 				51AC20D82813B7FC0004B644 /* Main.storyboard */,
 				51AC20DB2813B7FC0004B644 /* OnAir.entitlements */,
@@ -121,6 +154,52 @@
 			path = OnAirUITests;
 			sourceTree = "<group>";
 		};
+		51AC20FD2813B8640004B644 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				51AC20D42813B7FB0004B644 /* MainViewController.swift */,
+				51AC20FE2813B8970004B644 /* MainViewModel.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		51AC21022813B8AB0004B644 /* Infra */ = {
+			isa = PBXGroup;
+			children = (
+				51AC21152813CE000004B644 /* Net */,
+				51AC21032813B8B10004B644 /* Detectors */,
+			);
+			path = Infra;
+			sourceTree = "<group>";
+		};
+		51AC21032813B8B10004B644 /* Detectors */ = {
+			isa = PBXGroup;
+			children = (
+				51AC21002813B8A70004B644 /* MicDetector.swift */,
+				51AC21052813C3E50004B644 /* AVMonitor.m */,
+				51AC21072813C4000004B644 /* AVMonitor.h */,
+				51AC210A2813C4AD0004B644 /* Event.h */,
+				51AC21092813C4AD0004B644 /* Event.m */,
+				51AC21082813C4AD0004B644 /* LogMonitor.h */,
+				51AC210B2813C4AD0004B644 /* LogMonitor.m */,
+				51AC210F2813C4C70004B644 /* Client.h */,
+				51AC210E2813C4C70004B644 /* Client.m */,
+				51AC21112813C51C0004B644 /* Consts.h */,
+				51AC21122813C51C0004B644 /* Utilities.h */,
+				51AC21132813C51C0004B644 /* Utilities.m */,
+				51AC21042813C3E50004B644 /* OnAir-Bridging-Header.h */,
+			);
+			path = Detectors;
+			sourceTree = "<group>";
+		};
+		51AC21152813CE000004B644 /* Net */ = {
+			isa = PBXGroup;
+			children = (
+				51AC21162813CE0B0004B644 /* Net.swift */,
+			);
+			path = Net;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,6 +216,10 @@
 			dependencies = (
 			);
 			name = OnAir;
+			packageProductDependencies = (
+				514ECF4D2813D76C00AAF444 /* FirebaseDatabase */,
+				514ECF4F2813D76C00AAF444 /* FirebaseFirestore */,
+			);
 			productName = OnAir;
 			productReference = 51AC20CF2813B7FB0004B644 /* OnAir.app */;
 			productType = "com.apple.product-type.application";
@@ -189,6 +272,7 @@
 				TargetAttributes = {
 					51AC20CE2813B7FB0004B644 = {
 						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1320;
 					};
 					51AC20DF2813B7FC0004B644 = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -209,6 +293,9 @@
 				Base,
 			);
 			mainGroup = 51AC20C62813B7FB0004B644;
+			packageReferences = (
+				514ECF4C2813D76C00AAF444 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 51AC20D02813B7FB0004B644 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -227,6 +314,7 @@
 			files = (
 				51AC20D72813B7FC0004B644 /* Assets.xcassets in Resources */,
 				51AC20DA2813B7FC0004B644 /* Main.storyboard in Resources */,
+				514ECF522813D83100AAF444 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,8 +339,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51AC20D52813B7FB0004B644 /* ViewController.swift in Sources */,
+				51AC210D2813C4AD0004B644 /* LogMonitor.m in Sources */,
+				51AC21172813CE0B0004B644 /* Net.swift in Sources */,
+				51AC210C2813C4AD0004B644 /* Event.m in Sources */,
+				51AC21102813C4C70004B644 /* Client.m in Sources */,
+				51AC21142813C51C0004B644 /* Utilities.m in Sources */,
+				51AC20D52813B7FB0004B644 /* MainViewController.swift in Sources */,
 				51AC20D32813B7FB0004B644 /* AppDelegate.swift in Sources */,
+				51AC21062813C3E50004B644 /* AVMonitor.m in Sources */,
+				51AC20FF2813B8970004B644 /* MainViewModel.swift in Sources */,
+				51AC21012813B8A70004B644 /* MicDetector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,13 +516,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = OnAir/OnAir.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = AXFS8D8E46;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OnAir/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -438,6 +536,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.chuquimianproductions.OnAir;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "OnAir/Infra/Detectors/OnAir-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -447,13 +547,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = OnAir/OnAir.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = AXFS8D8E46;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OnAir/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -465,6 +567,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.chuquimianproductions.OnAir;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "OnAir/Infra/Detectors/OnAir-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -581,6 +684,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		514ECF4C2813D76C00AAF444 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		514ECF4D2813D76C00AAF444 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 514ECF4C2813D76C00AAF444 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		514ECF4F2813D76C00AAF444 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 514ECF4C2813D76C00AAF444 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 51AC20C72813B7FB0004B644 /* Project object */;
 }
