@@ -14,6 +14,7 @@ final class SessionHandler: NSObject, MCSessionDelegate {
     var receivedDataHandler: (Data, MCPeerID) -> Void = { _, _ in }
 
     func session(_ session: MCSession, peer peerID: MCPeerID, didChange state: MCSessionState) {
+        print(#function, peerID, state)
         let connectedPeers = session.connectedPeers
         OperationQueue.main.addOperation { [weak self] in
             self?.peerUpdateHandler(connectedPeers)
@@ -39,7 +40,7 @@ final class SessionHandler: NSObject, MCSessionDelegate {
     }
 
     func session(_ session: MCSession, didReceiveCertificate certificate: [Any]?, fromPeer peerID: MCPeerID, certificateHandler: @escaping (Bool) -> Void) {
-        // Unused
+        certificateHandler(true)
     }
 
 }

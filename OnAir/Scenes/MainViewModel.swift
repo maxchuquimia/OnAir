@@ -83,16 +83,17 @@ private extension OnAirViewModel {
 
     func rebuildMenu(currentState: Packet? = nil) {
         let isSomeoneNeedingQuiet = networkState.values.contains(where: { $0.isQuietRequired })
-        let quietCopy = copy(isQuiet: isSomeoneNeedingQuiet)
-        stateDidUpdate(quietCopy)
+        let statusBarCopy = copy(isQuiet: isSomeoneNeedingQuiet, numberOfConnectedPeers: networkState.values.count)
+        stateDidUpdate(statusBarCopy)
 
-        let menu = NSMenu()
         var allUsers = Array(networkState.values)
         allUsers.append(currentState ?? makeCurrentState())
         allUsers = allUsers.sorted(by: { $0.name < $1.name })
 
+        let menu = NSMenu()
+
         for user in allUsers {
-            let title = copy(isQuiet: user.isQuietRequired) + " " + user.name
+            let title = copy(isQuiet: user.isQuietRequired, numberOfConnectedPeers: allUsers.count) + " " + user.name
             let item = NSMenuItem(title: title, action: nil, keyEquivalent: "")
             menu.addItem(item)
         }
@@ -104,8 +105,9 @@ private extension OnAirViewModel {
         menuDidUpdate(menu)
     }
 
-    func copy(isQuiet: Bool) -> String {
-        isQuiet ? "🟥" : "🟩"
+    func copy(isQuiet: Bool, numberOfConnectedPeers: Int) -> String {
+        guard numberOfConnectedPeers > 0 else { return "🟧" }
+        return isQuiet ? "🟥" : "🟩"
     }
 
 }

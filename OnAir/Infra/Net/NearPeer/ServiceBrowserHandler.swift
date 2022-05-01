@@ -12,6 +12,7 @@ final class ServiceBrowserHandler: NSObject, MCNearbyServiceBrowserDelegate {
 
     var errorHandler: (Error) -> Void = { _ in }
     var willInvitePeerToSessionHandler = { }
+    var lostPeerHandler = { }
 
     private let session: MCSession
 
@@ -22,11 +23,13 @@ final class ServiceBrowserHandler: NSObject, MCNearbyServiceBrowserDelegate {
 
     func browser(_ browser: MCNearbyServiceBrowser, foundPeer peerID: MCPeerID, withDiscoveryInfo info: [String : String]?) {
         willInvitePeerToSessionHandler()
+        print(#function, peerID)
         browser.invitePeer(peerID, to: session, withContext: nil, timeout: NearPeerConstants.connectionTimeout)
     }
 
     func browser(_ browser: MCNearbyServiceBrowser, lostPeer peerID: MCPeerID) {
-        // Unused
+        print(#function, peerID)
+        lostPeerHandler()
     }
 
     func browser(_ browser: MCNearbyServiceBrowser, didNotStartBrowsingForPeers error: Error) {

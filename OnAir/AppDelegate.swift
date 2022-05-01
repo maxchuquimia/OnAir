@@ -16,7 +16,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
         if let button = statusItem.button {
-        button.title = "👋"
+            button.title = "👋"
 //                        button.image = NSImage(systemSymbolName: "1.circle", accessibilityDescription: "1")
         }
 
