@@ -10,7 +10,7 @@ import Foundation
 final class Net: NSObject {
 
     static let shared = Net()
-    let nearPeer = NearPeer(serviceType: "cponair")
+    var nearPeer = NearPeer(serviceType: "cponair")
 
     let keepAliveInterval: TimeInterval = 120.0
     var keepAlive: Timer?
@@ -30,6 +30,11 @@ final class Net: NSObject {
         keepAlive = Timer.scheduledTimer(withTimeInterval: keepAliveInterval, repeats: false, block: { [weak self] _ in
             self?.broadcast(packet: packet)
         })
+    }
+
+    func end() {
+        nearPeer.stop()
+        nearPeer = NearPeer(serviceType: "cponair")
     }
 
 }

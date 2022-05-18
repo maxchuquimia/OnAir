@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import AppKit
+import Combine
 
 final class OnAirViewModel {
 
@@ -15,10 +17,8 @@ final class OnAirViewModel {
         didSet { rebuildMenu() }
     }
     private let network: Net = .shared
-    private let detectors: [Detector] = [
-        MicDetector(),
-        DNDDetector(),
-    ]
+    private let detectors: [Detector] = [BentoBoxReader(), OrangeDotLocator()]
+    private var cancellables: Set<AnyCancellable> = []
 
     static var userId: String = {
         if UserDefaults.standard.string(forKey: "oaid") == nil {
@@ -33,23 +33,66 @@ final class OnAirViewModel {
     func setup() {
         network.connectedDevicesChanged = { [weak self] in self?.handleExternal(deviceList: $0) }
         network.didReceivePacket = { [weak self] in self?.handleExternal(packet: $0) }
-        network.begin(with: Self.userId)
+        bind()
 
         rebuildMenu()
-        performStatusCheck(forceSending: true)
-
-        statusCheckTimer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true, block: { [weak self] _ in
-            self?.performStatusCheck()
-        })
-        statusCheckTimer?.tolerance = 2.0
+        startSharingStatusUpdates()
     }
 
 }
 
 private extension OnAirViewModel {
 
+    func bind() {
+        NSWorkspace.shared.notificationCenter
+            .publisher(for: NSWorkspace.willSleepNotification, object: nil)
+            .sink { [weak self] _ in
+                self?.stopSharingStatusUpdates()
+            }
+            .store(in: &cancellables)
+
+        NSWorkspace.shared.notificationCenter
+            .publisher(for: NSWorkspace.screensDidSleepNotification, object: nil)
+            .sink { [weak self] _ in
+                self?.stopSharingStatusUpdates()
+            }
+            .store(in: &cancellables)
+
+        NSWorkspace.shared.notificationCenter
+            .publisher(for: NSWorkspace.screensDidWakeNotification, object: nil)
+            .sink { [weak self] _ in
+                self?.startSharingStatusUpdates()
+            }
+            .store(in: &cancellables)
+
+        NSWorkspace.shared.notificationCenter
+            .publisher(for: NSWorkspace.didWakeNotification, object: nil)
+            .sink { [weak self] _ in
+                self?.startSharingStatusUpdates()
+            }
+            .store(in: &cancellables)
+    }
+
+    func startSharingStatusUpdates() {
+        network.begin(with: Self.userId)
+
+        performStatusCheck(forceSending: true)
+
+        statusCheckTimer?.invalidate()
+        statusCheckTimer = Timer.scheduledTimer(withTimeInterval: 10.0, repeats: true, block: { [weak self] _ in
+            self?.performStatusCheck()
+        })
+        statusCheckTimer?.tolerance = 5.0
+    }
+
+    func stopSharingStatusUpdates() {
+        network.end()
+        statusCheckTimer?.invalidate()
+        statusCheckTimer = nil
+    }
+
     func makeCurrentState() -> Packet {
-        let isQuietRequired = detectors.contains(where: { $0.isQuietModeRequired })
+        let isQuietRequired = detectors.isQuietRequired
         return Packet(
             name: ProcessInfo.processInfo.hostName,
             id: Self.userId,
@@ -106,7 +149,7 @@ private extension OnAirViewModel {
     }
 
     func copy(isQuiet: Bool, numberOfConnectedPeers: Int) -> String {
-        guard numberOfConnectedPeers > 0 else { return "🟧" }
+        guard numberOfConnectedPeers > 0 else { return "🟨" }
         return isQuiet ? "🟥" : "🟩"
     }
 

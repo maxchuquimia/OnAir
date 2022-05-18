@@ -70,8 +70,12 @@ public extension NearPeer {
     func stop() {
         nextOperationTimer?.invalidate()
         session.disconnect()
-        advertiser.stopAdvertisingPeer()
-        browser.stopBrowsingForPeers()
+        if let advertiser = advertiser {
+            advertiser.stopAdvertisingPeer()
+        }
+        if let browser = browser {
+            browser.stopBrowsingForPeers()
+        }
         state = .idle
     }
 
