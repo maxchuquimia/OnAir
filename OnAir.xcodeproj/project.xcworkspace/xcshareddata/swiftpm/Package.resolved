@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "NearPeer",
+        "repositoryURL": "https://github.com/maxchuquimia/NearPeer",
+        "state": {
+          "branch": null,
+          "revision": "fdeca451527f242222d94850759f31631d591363",
+          "version": "0.0.2"
+        }
+      },
+      {
+        "package": "Reduks",
+        "repositoryURL": "https://github.com/maxchuquimia/Reduks.git",
+        "state": {
+          "branch": "master",
+          "revision": "2d22e27df42ce884aa24132628bcf4c9a7f83bd3",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

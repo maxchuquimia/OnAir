@@ -7,25 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		513921DE283A399900DCA024 /* NearPeer in Frameworks */ = {isa = PBXBuildFile; productRef = 513921DD283A399900DCA024 /* NearPeer */; };
 		516F0374282F57F8005B7EDF /* BentoBoxScreenshotter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516F0373282F57F8005B7EDF /* BentoBoxScreenshotter.swift */; };
-		519A11A6281E7EE600E9A344 /* NearPeer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519A11A5281E7EE600E9A344 /* NearPeer.swift */; };
-		519A11A8281E7F5C00E9A344 /* NearPeerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519A11A7281E7F5C00E9A344 /* NearPeerDelegate.swift */; };
-		519A11AA281E822400E9A344 /* ServiceAdvertiserHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519A11A9281E822400E9A344 /* ServiceAdvertiserHandler.swift */; };
-		519A11AC281E827400E9A344 /* ServiceBrowserHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519A11AB281E827400E9A344 /* ServiceBrowserHandler.swift */; };
-		519A11AE281E82F900E9A344 /* SessionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519A11AD281E82F900E9A344 /* SessionHandler.swift */; };
-		519A11B0281E854300E9A344 /* NearPeerConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519A11AF281E854300E9A344 /* NearPeerConstants.swift */; };
-		519A11B2281E89D500E9A344 /* NearPeerID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519A11B1281E89D500E9A344 /* NearPeerID.swift */; };
+		5174310628432CAF00C5726F /* Reduks in Frameworks */ = {isa = PBXBuildFile; productRef = 5174310528432CAF00C5726F /* Reduks */; };
+		5174310828432CF500C5726F /* Redux.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5174310728432CF500C5726F /* Redux.swift */; };
+		5174310B28432D2300C5726F /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5174310A28432D2300C5726F /* AppState.swift */; };
+		5174310D2843323600C5726F /* MenuState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5174310C2843323600C5726F /* MenuState.swift */; };
+		5174310F2843335800C5726F /* MenuBarBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5174310E2843335800C5726F /* MenuBarBuilder.swift */; };
+		517431112843360900C5726F /* NotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517431102843360900C5726F /* NotificationCenter.swift */; };
+		517431132843393D00C5726F /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517431122843393D00C5726F /* MenuBar.swift */; };
+		5174311528433A1D00C5726F /* NetworkState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5174311428433A1D00C5726F /* NetworkState.swift */; };
+		5174311728433ED700C5726F /* NetworkInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5174311628433ED700C5726F /* NetworkInterceptor.swift */; };
+		517431192843700200C5726F /* BroadcastRequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517431182843700200C5726F /* BroadcastRequestInterceptor.swift */; };
+		5174311C2843963A00C5726F /* ReduksTimer in Frameworks */ = {isa = PBXBuildFile; productRef = 5174311B2843963A00C5726F /* ReduksTimer */; };
+		5174311E2843967200C5726F /* TimerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5174311D2843967200C5726F /* TimerState.swift */; };
 		51A73A37283613130027F914 /* OrangeDotLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A73A36283613130027F914 /* OrangeDotLocator.swift */; };
 		51A73A39283614150027F914 /* Detector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A73A38283614150027F914 /* Detector.swift */; };
 		51AC20D32813B7FB0004B644 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AC20D22813B7FB0004B644 /* AppDelegate.swift */; };
-		51AC20D52813B7FB0004B644 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AC20D42813B7FB0004B644 /* MainViewController.swift */; };
+		51AC20D52813B7FB0004B644 /* _MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AC20D42813B7FB0004B644 /* _MainViewController.swift */; };
 		51AC20D72813B7FC0004B644 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51AC20D62813B7FC0004B644 /* Assets.xcassets */; };
 		51AC20DA2813B7FC0004B644 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51AC20D82813B7FC0004B644 /* Main.storyboard */; };
 		51AC20E52813B7FC0004B644 /* OnAirTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AC20E42813B7FC0004B644 /* OnAirTests.swift */; };
 		51AC20EF2813B7FC0004B644 /* OnAirUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AC20EE2813B7FC0004B644 /* OnAirUITests.swift */; };
 		51AC20F12813B7FC0004B644 /* OnAirUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AC20F02813B7FC0004B644 /* OnAirUITestsLaunchTests.swift */; };
-		51AC20FF2813B8970004B644 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AC20FE2813B8970004B644 /* MainViewModel.swift */; };
-		51AC21172813CE0B0004B644 /* Net.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AC21162813CE0B0004B644 /* Net.swift */; };
+		51AC20FF2813B8970004B644 /* _MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AC20FE2813B8970004B644 /* _MainViewModel.swift */; };
+		51AC21172813CE0B0004B644 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51AC21162813CE0B0004B644 /* Network.swift */; };
 		51B45E7128162790006491B8 /* BentoBoxReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B45E7028162790006491B8 /* BentoBoxReader.swift */; };
 		51B45E7328162F59006491B8 /* Packet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B45E7228162F59006491B8 /* Packet.swift */; };
 		51B45E752816321E006491B8 /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B45E742816321E006491B8 /* RequestType.swift */; };
@@ -50,18 +56,21 @@
 
 /* Begin PBXFileReference section */
 		516F0373282F57F8005B7EDF /* BentoBoxScreenshotter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BentoBoxScreenshotter.swift; sourceTree = "<group>"; };
-		519A11A5281E7EE600E9A344 /* NearPeer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearPeer.swift; sourceTree = "<group>"; };
-		519A11A7281E7F5C00E9A344 /* NearPeerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearPeerDelegate.swift; sourceTree = "<group>"; };
-		519A11A9281E822400E9A344 /* ServiceAdvertiserHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAdvertiserHandler.swift; sourceTree = "<group>"; };
-		519A11AB281E827400E9A344 /* ServiceBrowserHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceBrowserHandler.swift; sourceTree = "<group>"; };
-		519A11AD281E82F900E9A344 /* SessionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionHandler.swift; sourceTree = "<group>"; };
-		519A11AF281E854300E9A344 /* NearPeerConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearPeerConstants.swift; sourceTree = "<group>"; };
-		519A11B1281E89D500E9A344 /* NearPeerID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearPeerID.swift; sourceTree = "<group>"; };
+		5174310728432CF500C5726F /* Redux.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Redux.swift; sourceTree = "<group>"; };
+		5174310A28432D2300C5726F /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		5174310C2843323600C5726F /* MenuState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuState.swift; sourceTree = "<group>"; };
+		5174310E2843335800C5726F /* MenuBarBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarBuilder.swift; sourceTree = "<group>"; };
+		517431102843360900C5726F /* NotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenter.swift; sourceTree = "<group>"; };
+		517431122843393D00C5726F /* MenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
+		5174311428433A1D00C5726F /* NetworkState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkState.swift; sourceTree = "<group>"; };
+		5174311628433ED700C5726F /* NetworkInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInterceptor.swift; sourceTree = "<group>"; };
+		517431182843700200C5726F /* BroadcastRequestInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcastRequestInterceptor.swift; sourceTree = "<group>"; };
+		5174311D2843967200C5726F /* TimerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerState.swift; sourceTree = "<group>"; };
 		51A73A36283613130027F914 /* OrangeDotLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeDotLocator.swift; sourceTree = "<group>"; };
 		51A73A38283614150027F914 /* Detector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detector.swift; sourceTree = "<group>"; };
 		51AC20CF2813B7FB0004B644 /* OnAir.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnAir.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51AC20D22813B7FB0004B644 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		51AC20D42813B7FB0004B644 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		51AC20D42813B7FB0004B644 /* _MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _MainViewController.swift; sourceTree = "<group>"; };
 		51AC20D62813B7FC0004B644 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		51AC20D92813B7FC0004B644 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		51AC20DB2813B7FC0004B644 /* OnAir.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OnAir.entitlements; sourceTree = "<group>"; };
@@ -70,8 +79,8 @@
 		51AC20EA2813B7FC0004B644 /* OnAirUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnAirUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		51AC20EE2813B7FC0004B644 /* OnAirUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnAirUITests.swift; sourceTree = "<group>"; };
 		51AC20F02813B7FC0004B644 /* OnAirUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnAirUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		51AC20FE2813B8970004B644 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
-		51AC21162813CE0B0004B644 /* Net.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Net.swift; sourceTree = "<group>"; };
+		51AC20FE2813B8970004B644 /* _MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _MainViewModel.swift; sourceTree = "<group>"; };
+		51AC21162813CE0B0004B644 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		51B45E7028162790006491B8 /* BentoBoxReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BentoBoxReader.swift; sourceTree = "<group>"; };
 		51B45E7228162F59006491B8 /* Packet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Packet.swift; sourceTree = "<group>"; };
 		51B45E742816321E006491B8 /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
@@ -83,6 +92,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5174310628432CAF00C5726F /* Reduks in Frameworks */,
+				513921DE283A399900DCA024 /* NearPeer in Frameworks */,
+				5174311C2843963A00C5726F /* ReduksTimer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,18 +115,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		519A11A4281E7EDB00E9A344 /* NearPeer */ = {
+		5174310928432D1500C5726F /* Redux */ = {
 			isa = PBXGroup;
 			children = (
-				519A11A5281E7EE600E9A344 /* NearPeer.swift */,
-				519A11B1281E89D500E9A344 /* NearPeerID.swift */,
-				519A11AF281E854300E9A344 /* NearPeerConstants.swift */,
-				519A11A7281E7F5C00E9A344 /* NearPeerDelegate.swift */,
-				519A11A9281E822400E9A344 /* ServiceAdvertiserHandler.swift */,
-				519A11AB281E827400E9A344 /* ServiceBrowserHandler.swift */,
-				519A11AD281E82F900E9A344 /* SessionHandler.swift */,
+				5174310728432CF500C5726F /* Redux.swift */,
+				5174310A28432D2300C5726F /* AppState.swift */,
+				5174310C2843323600C5726F /* MenuState.swift */,
+				5174311428433A1D00C5726F /* NetworkState.swift */,
+				5174311D2843967200C5726F /* TimerState.swift */,
 			);
-			path = NearPeer;
+			path = Redux;
+			sourceTree = "<group>";
+		};
+		5174311A2843963A00C5726F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		51AC20C62813B7FB0004B644 = {
@@ -124,6 +141,7 @@
 				51AC20E32813B7FC0004B644 /* OnAirTests */,
 				51AC20ED2813B7FC0004B644 /* OnAirUITests */,
 				51AC20D02813B7FB0004B644 /* Products */,
+				5174311A2843963A00C5726F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,6 +160,7 @@
 			children = (
 				754E59A02813D45800D8060C /* Info.plist */,
 				51AC20D22813B7FB0004B644 /* AppDelegate.swift */,
+				5174310928432D1500C5726F /* Redux */,
 				51AC21022813B8AB0004B644 /* Infra */,
 				51AC20FD2813B8640004B644 /* Scenes */,
 				51AC20D62813B7FC0004B644 /* Assets.xcassets */,
@@ -171,8 +190,11 @@
 		51AC20FD2813B8640004B644 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				51AC20D42813B7FB0004B644 /* MainViewController.swift */,
-				51AC20FE2813B8970004B644 /* MainViewModel.swift */,
+				51AC20D42813B7FB0004B644 /* _MainViewController.swift */,
+				51AC20FE2813B8970004B644 /* _MainViewModel.swift */,
+				5174310E2843335800C5726F /* MenuBarBuilder.swift */,
+				517431122843393D00C5726F /* MenuBar.swift */,
+				517431102843360900C5726F /* NotificationCenter.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -180,7 +202,6 @@
 		51AC21022813B8AB0004B644 /* Infra */ = {
 			isa = PBXGroup;
 			children = (
-				51B45E6B28162584006491B8 /* Script */,
 				51AC21152813CE000004B644 /* Net */,
 				51AC21032813B8B10004B644 /* Detectors */,
 			);
@@ -194,6 +215,7 @@
 				516F0373282F57F8005B7EDF /* BentoBoxScreenshotter.swift */,
 				51A73A36283613130027F914 /* OrangeDotLocator.swift */,
 				51A73A38283614150027F914 /* Detector.swift */,
+				517431182843700200C5726F /* BroadcastRequestInterceptor.swift */,
 			);
 			path = Detectors;
 			sourceTree = "<group>";
@@ -201,19 +223,12 @@
 		51AC21152813CE000004B644 /* Net */ = {
 			isa = PBXGroup;
 			children = (
-				51AC21162813CE0B0004B644 /* Net.swift */,
+				51AC21162813CE0B0004B644 /* Network.swift */,
+				5174311628433ED700C5726F /* NetworkInterceptor.swift */,
 				51B45E742816321E006491B8 /* RequestType.swift */,
 				51B45E7228162F59006491B8 /* Packet.swift */,
-				519A11A4281E7EDB00E9A344 /* NearPeer */,
 			);
 			path = Net;
-			sourceTree = "<group>";
-		};
-		51B45E6B28162584006491B8 /* Script */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Script;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +248,9 @@
 			);
 			name = OnAir;
 			packageProductDependencies = (
+				513921DD283A399900DCA024 /* NearPeer */,
+				5174310528432CAF00C5726F /* Reduks */,
+				5174311B2843963A00C5726F /* ReduksTimer */,
 			);
 			productName = OnAir;
 			productReference = 51AC20CF2813B7FB0004B644 /* OnAir.app */;
@@ -308,6 +326,8 @@
 			);
 			mainGroup = 51AC20C62813B7FB0004B644;
 			packageReferences = (
+				513921DC283A399900DCA024 /* XCRemoteSwiftPackageReference "NearPeer" */,
+				5174310428432CAF00C5726F /* XCRemoteSwiftPackageReference "Reduks" */,
 			);
 			productRefGroup = 51AC20D02813B7FB0004B644 /* Products */;
 			projectDirPath = "";
@@ -351,22 +371,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				519A11AE281E82F900E9A344 /* SessionHandler.swift in Sources */,
-				51AC21172813CE0B0004B644 /* Net.swift in Sources */,
-				51AC20D52813B7FB0004B644 /* MainViewController.swift in Sources */,
+				5174311528433A1D00C5726F /* NetworkState.swift in Sources */,
+				51AC21172813CE0B0004B644 /* Network.swift in Sources */,
+				51AC20D52813B7FB0004B644 /* _MainViewController.swift in Sources */,
+				517431132843393D00C5726F /* MenuBar.swift in Sources */,
 				51A73A39283614150027F914 /* Detector.swift in Sources */,
+				5174310B28432D2300C5726F /* AppState.swift in Sources */,
+				5174310F2843335800C5726F /* MenuBarBuilder.swift in Sources */,
 				51AC20D32813B7FB0004B644 /* AppDelegate.swift in Sources */,
+				5174311728433ED700C5726F /* NetworkInterceptor.swift in Sources */,
 				516F0374282F57F8005B7EDF /* BentoBoxScreenshotter.swift in Sources */,
-				519A11B0281E854300E9A344 /* NearPeerConstants.swift in Sources */,
-				519A11A6281E7EE600E9A344 /* NearPeer.swift in Sources */,
-				519A11AA281E822400E9A344 /* ServiceAdvertiserHandler.swift in Sources */,
+				517431112843360900C5726F /* NotificationCenter.swift in Sources */,
 				51A73A37283613130027F914 /* OrangeDotLocator.swift in Sources */,
+				517431192843700200C5726F /* BroadcastRequestInterceptor.swift in Sources */,
+				5174311E2843967200C5726F /* TimerState.swift in Sources */,
 				51B45E7128162790006491B8 /* BentoBoxReader.swift in Sources */,
-				519A11AC281E827400E9A344 /* ServiceBrowserHandler.swift in Sources */,
 				51B45E752816321E006491B8 /* RequestType.swift in Sources */,
-				51AC20FF2813B8970004B644 /* MainViewModel.swift in Sources */,
-				519A11B2281E89D500E9A344 /* NearPeerID.swift in Sources */,
-				519A11A8281E7F5C00E9A344 /* NearPeerDelegate.swift in Sources */,
+				5174310828432CF500C5726F /* Redux.swift in Sources */,
+				5174310D2843323600C5726F /* MenuState.swift in Sources */,
+				51AC20FF2813B8970004B644 /* _MainViewModel.swift in Sources */,
 				51B45E7328162F59006491B8 /* Packet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -705,6 +728,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		513921DC283A399900DCA024 /* XCRemoteSwiftPackageReference "NearPeer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maxchuquimia/NearPeer";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.2;
+			};
+		};
+		5174310428432CAF00C5726F /* XCRemoteSwiftPackageReference "Reduks" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maxchuquimia/Reduks.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		513921DD283A399900DCA024 /* NearPeer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 513921DC283A399900DCA024 /* XCRemoteSwiftPackageReference "NearPeer" */;
+			productName = NearPeer;
+		};
+		5174310528432CAF00C5726F /* Reduks */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5174310428432CAF00C5726F /* XCRemoteSwiftPackageReference "Reduks" */;
+			productName = Reduks;
+		};
+		5174311B2843963A00C5726F /* ReduksTimer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5174310428432CAF00C5726F /* XCRemoteSwiftPackageReference "Reduks" */;
+			productName = ReduksTimer;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 51AC20C72813B7FB0004B644 /* Project object */;
 }

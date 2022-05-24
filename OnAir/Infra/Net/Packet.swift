@@ -13,16 +13,16 @@ struct Packet: Hashable {
 
     let name: String
     let id: String
-    let isQuietRequired: Bool
+    let isOnAir: Bool
 
     var stringValue: String {
-        [name, id, String(isQuietRequired)].joined(separator: Packet.delimiter)
+        [name, id, String(isOnAir)].joined(separator: Packet.delimiter)
     }
 
-    init(name: String, id: String, isQuietRequired: Bool) {
+    init(name: String, id: String, isOnAir: Bool) {
         self.name = name
         self.id = id
-        self.isQuietRequired = isQuietRequired
+        self.isOnAir = isOnAir
     }
 
     init?(string: String) {
@@ -30,7 +30,7 @@ struct Packet: Hashable {
         guard components.count >= 3 else { return nil }
         self.name = components[0]
         self.id = components[1]
-        self.isQuietRequired = components[2] == String(true)
+        self.isOnAir = components[2] == String(true)
     }
 
     func hash(into hasher: inout Hasher) {
