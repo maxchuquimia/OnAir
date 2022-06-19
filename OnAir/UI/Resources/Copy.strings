@@ -1,0 +1,32 @@
+/* 
+  Copy.strings
+  OnAir
+
+  Created by Max Chuquimia on 14/6/2022.
+  
+*/
+"App.Name" = "On Air";
+
+"UserStatus.Field.Placeholder" = "Enter Display Name";
+"UserStatus.IsOnAirSuffix" = " is _On Air_";
+
+"Popover.Settings.Quit" = "Quit";
+"Popover.Settings.LaunchAtLogin" = "Launch _On Air_ on login";
+"Popover.Users.Remote.Title" = "Nearby People";
+"Popover.Users.Me.Title" = "This Computer";
+
+"Network.Status.idle" = "Launching…";
+"Network.Status.searchingForActiveSessions" = "Finding nearby _On Air_ users…";
+"Network.Status.broadcastingNewSession"     = "Waiting for nearby _On Air_ users…"; // max length
+"Network.Status.hostingSession"             = "Hosting an _On Air_ session…";
+"Network.Status.connectedToExistingSession" = "Connecting to an _On Air_ session…";
+
+"Popover.ScreenRec.Title" = "_On Air_ requires\nScreen Recording access.";
+"Popover.ScreenRec.Button" = "Find out why";
+"Popover.ScreenRec.Url" = "https://github.com/maxchuquimia/OnAir";
+
+"Popover.Version.Message" = "On Air %s (%s)";
+"Popover.Version.Updates.title" = "Check for updates";
+"Popover.Version.Updates.url" = "https://github.com/maxchuquimia/OnAir/issues/releases";
+"Popover.Version.Support.title" = "Support";
+"Popover.Version.Support.url" = "https://github.com/maxchuquimia/OnAir/issues";

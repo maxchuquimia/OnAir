@@ -2,21 +2,30 @@
   "object": {
     "pins": [
       {
+        "package": "LaunchAtLogin",
+        "repositoryURL": "https://github.com/sindresorhus/LaunchAtLogin",
+        "state": {
+          "branch": null,
+          "revision": "e8171b3e38a2816f579f58f3dac1522aa39efe41",
+          "version": "4.2.0"
+        }
+      },
+      {
         "package": "NearPeer",
         "repositoryURL": "https://github.com/maxchuquimia/NearPeer",
         "state": {
           "branch": null,
-          "revision": "81f4f4dc973ebdf58769e797a7a73568d50b2572",
-          "version": "0.0.4"
+          "revision": "b84e219bacb6fd70287cb0ed0ac350b29dab1fba",
+          "version": "1.0.0"
         }
       },
       {
-        "package": "Reduks",
-        "repositoryURL": "https://github.com/maxchuquimia/Reduks.git",
+        "package": "SwiftProtobuf",
+        "repositoryURL": "https://github.com/apple/swift-protobuf.git",
         "state": {
-          "branch": "master",
-          "revision": "2d22e27df42ce884aa24132628bcf4c9a7f83bd3",
-          "version": null
+          "branch": null,
+          "revision": "e1499bc69b9040b29184f7f2996f7bab467c1639",
+          "version": "1.19.0"
         }
       }
     ]

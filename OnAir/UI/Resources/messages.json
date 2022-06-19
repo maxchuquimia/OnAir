@@ -1,0 +1,15 @@
+{
+    "onair": [
+        "Quiet, please!",
+        "Shhhhh!",
+        "Inside voices!",
+        "Whispers only!",
+        "Tippy-toe!",
+        "Keep the noise down…"
+    ],
+    "default": [
+        "No-one is _On Air_",
+        "Make some noise!",
+        "Snacktime, anyone?"
+    ]
+}

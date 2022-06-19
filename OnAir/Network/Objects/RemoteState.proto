@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+message RemoteState {
+   string peerId = 1;
+   string peerName = 2;
+   bool isOnAir = 3;
+}

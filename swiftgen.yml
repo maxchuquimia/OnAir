@@ -1,0 +1,11 @@
+strings:
+  inputs: OnAir/UI/Resources/Copy.strings
+  outputs:
+    - templateName: structured-swift5
+      output: OnAir/UI/Resources/GeneratedCopy.swift
+xcassets:
+  inputs:
+    - OnAir/UI/Resources/Assets.xcassets
+  outputs:
+    - templateName: swift5
+      output: OnAir/UI/Resources/GeneratedAssets.swift
