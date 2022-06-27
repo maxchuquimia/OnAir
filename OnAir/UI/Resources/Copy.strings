@@ -27,6 +27,6 @@
 
 "Popover.Version.Message" = "On Air %s (%s)";
 "Popover.Version.Updates.title" = "Check for updates";
-"Popover.Version.Updates.url" = "https://github.com/maxchuquimia/OnAir/issues/releases";
+"Popover.Version.Updates.url" = "https://github.com/maxchuquimia/OnAir/releases";
 "Popover.Version.Support.title" = "Support";
 "Popover.Version.Support.url" = "https://github.com/maxchuquimia/OnAir/issues";
