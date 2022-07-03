@@ -15,13 +15,14 @@ final class SystemStatusBarController {
     private let statusItem: NSStatusItem
     private let popover: NSPopover
     private let eventMonitor: EventMonitor
-    private let appUI = AppUI.shared.menuBar
+    private let ui: MenuBarUI
     private var cancellables: Set<AnyCancellable> = []
 
-    init<V: View>(contentView: V) {
+    init<V: View>(contentView: V, ui: MenuBarUI) {
         self.statusItem = statusBar.statusItem(withLength: NSStatusItem.variableLength)
         self.popover = NSPopover()
         self.eventMonitor = EventMonitor(mask: [.leftMouseDown, .rightMouseDown])
+        self.ui = ui
         popover.contentViewController = NSHostingController(rootView: contentView)
         setup()
     }
@@ -37,7 +38,7 @@ private extension SystemStatusBarController {
         eventMonitor.handler = { [weak self] _ in
             self?.hide()
         }
-        appUI.$statusImage
+        ui.$statusImage
             .sink { [weak self] icon in
                 self?.statusItem.button?.image = icon.image
             }

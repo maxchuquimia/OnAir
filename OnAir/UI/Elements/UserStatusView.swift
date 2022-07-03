@@ -76,26 +76,3 @@ struct UserStatusView: View {
     }
 
 }
-
-struct UserStatusView_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            UserStatusView(
-                state: UserState(name: "Firstname Lastname", isOnAir: false),
-                isEditable: false,
-                onUsernameChanged: nil
-            )
-            UserStatusView(
-                state: UserState(name: "Firstname Lastname", isOnAir: false),
-                isEditable: true,
-                onUsernameChanged: nil
-            )
-            UserStatusView(
-                state: UserState(name: "Firstname Lastname", isOnAir: false),
-                isEditable: true,
-                onUsernameChanged: nil,
-                isEditing: true
-            )
-        }
-    }
-}

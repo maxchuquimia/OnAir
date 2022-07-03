@@ -9,7 +9,7 @@ import SwiftUI
 
 struct FriendlyMessageView: View {
 
-    @EnvironmentObject private var metaInfo: AppUI.MetaInfo
+    @EnvironmentObject private var metaInfo: MetaInfoUI
 
     var body: some View {
         ZStack {
@@ -26,11 +26,4 @@ struct FriendlyMessageView: View {
         .frame(height: 40)
     }
 
-}
-
-struct MessageView_Previews: PreviewProvider {
-    static var previews: some View {
-        FriendlyMessageView()
-            .environmentObject(AppUI.shared.metaInfo)
-    }
 }

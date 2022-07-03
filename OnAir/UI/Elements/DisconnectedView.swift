@@ -31,11 +31,3 @@ struct DisconnectedView: View {
     }
 
 }
-
-struct DisconnectedView_Previews: PreviewProvider {
-    static var previews: some View {
-        DisconnectedView(
-            text: "Searching"
-        )
-    }
-}

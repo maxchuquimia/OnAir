@@ -14,16 +14,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     private var viewModel: StatusViewModel!
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        let userInfo = UserInfoUI()
+        let metaInfo = MetaInfoUI()
+        let menuBar = MenuBarUI()
+
         let contentView = MenuBarPopoverView()
-            .environmentObject(AppUI.shared.menuBar)
-            .environmentObject(AppUI.shared.userInfo)
-            .environmentObject(AppUI.shared.metaInfo)
+            .environmentObject(menuBar)
+            .environmentObject(userInfo)
+            .environmentObject(metaInfo)
 
-        // Stop SwiftUI previews from crashing
-        guard ProcessInfo.processInfo.environment["XCODE_RUNNING_FOR_PREVIEWS"] != "1" else { return }
-
-        barController = SystemStatusBarController(contentView: contentView)
-        viewModel = StatusViewModel()
+        barController = SystemStatusBarController(contentView: contentView, ui: menuBar)
+        viewModel = StatusViewModel(ui: .init(userInfo: userInfo, metaInfo: metaInfo, menuBar: menuBar))
     }
 
 }

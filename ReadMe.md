@@ -24,6 +24,6 @@ _On Air_ only connects to nearby devices locally - your information is never sen
 
 ## Caveats
 - Most likely only works if English is set as the system language (see `WindowInfoRecognizer`)
-- Future versions of macOS could change how the Status Indicator dot works, resulting in On Air breaking
+- Future versions of macOS could change how the Status Indicator dot works, resulting in _On Air_ breaking
 - No unit tests at this time :(
-- UI state is represented as a singleton as I still haven't found a nice way to bind SwiftUI to a traditional view model yet. At least the core logic is entirely separated from the view this way...
+- UI state is represented as an injected singleton as I still haven't found a nice way to bind SwiftUI to a traditional view model yet. At least the core logic is entirely separated from the view this way... it works for a single-view-model app like this.

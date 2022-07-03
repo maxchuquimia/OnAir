@@ -29,15 +29,3 @@ struct ScreenPermissionView: View {
     }
 
 }
-
-struct ScreenPermissionView_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            ScreenPermissionView()
-                .frame(width: 300)
-            ScreenPermissionView()
-                .preferredColorScheme(.dark)
-                .frame(width: 300)
-        }
-    }
-}

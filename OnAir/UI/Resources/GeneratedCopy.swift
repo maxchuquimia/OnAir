@@ -71,7 +71,7 @@ internal enum L10n {
       internal enum Updates {
         /// Check for updates
         internal static let title = L10n.tr("Copy", "Popover.Version.Updates.title")
-        /// https://github.com/maxchuquimia/OnAir/issues/releases
+        /// https://github.com/maxchuquimia/OnAir/releases
         internal static let url = L10n.tr("Copy", "Popover.Version.Updates.url")
       }
     }

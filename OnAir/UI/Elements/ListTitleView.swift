@@ -29,11 +29,3 @@ struct ListTitleView: View {
     }
 
 }
-
-struct ListTitleView_Previews: PreviewProvider {
-    static var previews: some View {
-        ListTitleView(
-            title: "This computer"
-        )
-    }
-}

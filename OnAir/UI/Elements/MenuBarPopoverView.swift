@@ -10,8 +10,8 @@ import LaunchAtLogin
 
 struct MenuBarPopoverView: View {
 
-    @EnvironmentObject var userInfo: AppUI.UserInfo
-    @EnvironmentObject var metaInfo: AppUI.MetaInfo
+    @EnvironmentObject var userInfo: UserInfoUI
+    @EnvironmentObject var metaInfo: MetaInfoUI
     @ObservedObject private var launchAtLogin = LaunchAtLogin.observable
 
     var body: some View {
@@ -65,14 +65,4 @@ struct MenuBarPopoverView: View {
         }
     }
 
-}
-
-struct MenuBarPopoverView_Previews: PreviewProvider {
-    static var previews: some View {
-        MenuBarPopoverView()
-            .frame(width: 300)
-            .environmentObject(AppUI.shared.menuBar)
-            .environmentObject(AppUI.shared.userInfo)
-            .environmentObject(AppUI.shared.metaInfo)
-    }
 }

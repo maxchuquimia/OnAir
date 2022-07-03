@@ -51,10 +51,3 @@ private extension Bundle {
         return infoDictionary?["CFBundleVersion"] as? String ?? "?"
     }
 }
-
-
-struct VersionView_Previews: PreviewProvider {
-    static var previews: some View {
-        VersionView()
-    }
-}

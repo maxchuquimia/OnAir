@@ -11,6 +11,13 @@ import NearPeer
 
 final class StatusViewModel {
 
+    struct UI {
+        let userInfo: UserInfoUI
+        let metaInfo: MetaInfoUI
+        let menuBar: MenuBarUI
+    }
+
+    private let ui: UI
     private let network: LocalNetworkInterface
     private let computerStateMonitor: ComputerStateMonitorInterface
     private let usernameDataSource: UsernameDataSourceInterface
@@ -23,7 +30,8 @@ final class StatusViewModel {
         didSet { updateIsOnAirMetaInfo() }
     }
 
-    init(network: LocalNetworkInterface = LocalNetwork.shared, stateMontor: ComputerStateMonitorInterface = ComputerStateMonitor(), usernameDataSource: UsernameDataSourceInterface = UsernameDataSource(), messageDataSource: FriendlyMessageDataSourceInterface = FriendlyMessageDataSource()) {
+    init(ui: UI, network: LocalNetworkInterface = LocalNetwork.shared, stateMontor: ComputerStateMonitorInterface = ComputerStateMonitor(), usernameDataSource: UsernameDataSourceInterface = UsernameDataSource(), messageDataSource: FriendlyMessageDataSourceInterface = FriendlyMessageDataSource()) {
+        self.ui = ui
         self.network = network
         self.computerStateMonitor = stateMontor
         self.usernameDataSource = usernameDataSource
@@ -58,7 +66,7 @@ private extension StatusViewModel {
             self?.handleSystemAction(action: $0)
         }
 
-        AppUI.shared.userInfo.$currentUserTextFieldValue
+        ui.userInfo.$currentUserTextFieldValue
             .dropFirst()
             .removeDuplicates()
             .sink { [weak self] newValue in
@@ -88,11 +96,11 @@ private extension StatusViewModel {
 
     func handleNetworkStateChange(newValue: NearPeer.State) {
         switch newValue {
-        case .idle: AppUI.shared.metaInfo.statusMessage = L10n.Network.Status.idle
-        case .searchingForActiveSessions: AppUI.shared.metaInfo.statusMessage = L10n.Network.Status.searchingForActiveSessions
-        case .broadcastingNewSession: AppUI.shared.metaInfo.statusMessage = L10n.Network.Status.broadcastingNewSession
-        case .hostingSession: AppUI.shared.metaInfo.statusMessage = L10n.Network.Status.hostingSession
-        case .connectedToExistingSession: AppUI.shared.metaInfo.statusMessage = L10n.Network.Status.connectedToExistingSession
+        case .idle: ui.metaInfo.statusMessage = L10n.Network.Status.idle
+        case .searchingForActiveSessions: ui.metaInfo.statusMessage = L10n.Network.Status.searchingForActiveSessions
+        case .broadcastingNewSession: ui.metaInfo.statusMessage = L10n.Network.Status.broadcastingNewSession
+        case .hostingSession: ui.metaInfo.statusMessage = L10n.Network.Status.hostingSession
+        case .connectedToExistingSession: ui.metaInfo.statusMessage = L10n.Network.Status.connectedToExistingSession
         }
     }
 
@@ -102,14 +110,14 @@ private extension StatusViewModel {
 
     func userStatesDidChange(newStates: [RemoteUserState]) {
         if newStates.isEmpty {
-            AppUI.shared.menuBar.statusImage = Asset.iconSearching
+            ui.menuBar.statusImage = Asset.iconSearching
             isSomeoneElseOnAir = false
         } else {
             isSomeoneElseOnAir = newStates.contains { $0.isOnAir }
-            AppUI.shared.menuBar.statusImage = isSomeoneElseOnAir ? Asset.iconOnair : Asset.iconConnected
+            ui.menuBar.statusImage = isSomeoneElseOnAir ? Asset.iconOnair : Asset.iconConnected
         }
 
-        AppUI.shared.userInfo.users = newStates.map {
+        ui.userInfo.users = newStates.map {
             UserState(name: $0.name, isOnAir: $0.isOnAir)
         }
 
@@ -122,7 +130,7 @@ private extension StatusViewModel {
         let currentState = UserState(name: usernameDataSource.getUsername(), isOnAir: isQuietRequired)
         guard force || currentState != lastSentState else { return }
         lastSentState = currentState
-        AppUI.shared.userInfo.currentUser = currentState
+        ui.userInfo.currentUser = currentState
         network.broadcast(state: currentState)
     }
 
@@ -136,14 +144,14 @@ private extension StatusViewModel {
 
     func changeMessage() {
         if isSomeoneElseOnAir {
-            AppUI.shared.metaInfo.friendlyMessage = messageDataSource.getQuietMessage()
+            ui.metaInfo.friendlyMessage = messageDataSource.getQuietMessage()
         } else {
-            AppUI.shared.metaInfo.friendlyMessage = messageDataSource.getDefaultMessage()
+            ui.metaInfo.friendlyMessage = messageDataSource.getDefaultMessage()
         }
     }
 
     func updateIsOnAirMetaInfo() {
-        AppUI.shared.metaInfo.isSomeoneOnAir = isSomeoneElseOnAir
+        ui.metaInfo.isSomeoneOnAir = isSomeoneElseOnAir
     }
 
 }
