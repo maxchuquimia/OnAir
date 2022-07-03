@@ -14,7 +14,8 @@ struct ScreenPermissionView: View {
             Spacer()
 
             Text(LocalizedStringKey(L10n.Popover.ScreenRec.title))
-                .font(.title)
+                .font(.body)
+                .bold()
                 .multilineTextAlignment(.center)
                 .fixedSize()
                 .minimumScaleFactor(0.5)
