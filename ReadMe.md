@@ -3,17 +3,17 @@
 # On Air
 **_A macOS app that helps other people at home know when you're in a meeting._**
 
-_On Air_ runs in your status bar and turns red when another nearby _On Air_ user's microphone is being accessed.
+_On Air_ runs in your status bar. It subtly turns from 🟢 green to 🔴 red when another nearby _On Air_ user's microphone is in use.
 
 <img src="Marketing/screenshot_1.png?raw=true" width="300"/> <img src="Marketing/screenshot_2.png?raw=true" width="300"/>
 
-### How it works
+## How it works
 
-_On Air_ periodically takes a screenshot of your status bar to check for the presence of the orange "Sensor Indicator":
+_On Air_ periodically takes a screenshot of your status bar to check for the presence of the orange 🟠 “Sensor&nbsp;Indicator” icon:
 
 <img src="Marketing/statusbar.gif?raw=true" />
 
-If the orange dot is there, your microphone is likely in use. _On Air_ then updates the _On Air_ icon on nearby Macs to show that you are in a meeting.
+If the orange dot is there, your microphone is in use (even if it's muted) - indicating that you are in a meeting. _On Air_ then updates the _On Air_ icon on nearby Macs to show that you are in a meeting.
 
 ## Installation
 Download a notarized version of `OnAir.app` from [the releases page](https://github.com/maxchuquimia/OnAir/releases). 
